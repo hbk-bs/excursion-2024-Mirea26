@@ -1,38 +1,125 @@
-* {
+*{
   box-sizing: border-box;
-}
-html {
-  font-size: 18px;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-}
-main {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-figure {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-weight: normal;
   gap: 1rem;
 }
 
-img {
-  max-width: 100%;
+html{
+  font-size: 18px;
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+  gap: 1rem;
+  max-width: 1024px;
+}
+
+h1{
+  text-align: center;
+  color: #ac0000;
+  font-size:7rem;
+}
+
+h2{
+  text-align: left;
+  font-size: 2rem;
+  color: #ac0000;
+  align-self: flex-start;
+}
+
+h3{
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+p{
+text-align: left;
+align-self: flex-start;
+}
+
+img{
+  width: 100%;
   height: auto;
+  /* border-radius: 1rem; */
 }
 
 figcaption {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  /* background-color: #a96666; */
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+figure{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sixteen-nine {
+  flex: 16 9 0;
+  aspect-ratio: 16 / 9;
+}
+
+.nine-sixteen {
+  flex: 9 16 0;
+  aspect-ratio: 9 / 16;
+}
+
+.four-three {
+  flex: 4 3 0;
+  aspect-ratio: 4 / 3;
+}
+
+.three-four {
+  flex: 3 4 0;
+  aspect-ratio: 3 / 4;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 90vw;
+  }
+  .locations-container {
+    flex-direction: column;
+  }
+  .facts {
+    width: 100%;
+  }
 }
